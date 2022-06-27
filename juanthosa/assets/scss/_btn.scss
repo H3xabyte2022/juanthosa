@@ -1,0 +1,246 @@
+/* ------------------------------------------------------------------
+   Template Default Button, Input Styles - Value Change with Your's Need
+ -------------------------------------------------------------------- */
+.btnd {
+    line-height: 1;
+    display: inline-block;
+    @include transition(.4s);
+    text-transform: capitalize;    
+    position: relative;
+    z-index: 1;
+}
+
+.theme-btn {
+    color: $white;
+    @extend .btnd;    
+    padding: 21px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    background-color: $second-color;
+    border: 1px solid $second-color;
+    transition: all .3s ease-in-out;
+
+    &.border-style {
+        position: relative;
+        z-index: 2;
+        
+        &::before {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid #fff;
+            opacity: .2;
+            z-index: -1;
+        }
+    }
+
+    @media (max-width: 580px) {
+        padding: 16px 35px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 15px 30px;
+    }
+
+    &.no-fil {
+        background-color: transparent;
+        border-color: rgba($color: #fff, $alpha: 0.2);        
+        box-shadow: inherit;
+        margin-left: 15px;
+
+        @media (max-width: 500px) {
+            margin-left: 0;
+        }
+
+        &:hover {
+            background-color: $second-color;
+            border: 1px solid $second-color;
+        }
+    }
+
+    &.black {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        box-shadow: inherit;
+
+        &:hover {
+            background-color: $second-color;
+            border: 1px solid $second-color;            
+        }
+    }
+
+    &.minimal-btn {
+        color: #727475;
+        border: 1px solid #ebebeb;
+        background: transparent;
+        box-shadow: inherit;
+    }
+
+    &:hover {
+        background-color: $theme-color;
+        border: 1px solid $theme-color;
+        box-shadow: inherit;
+        color: $white;
+    }
+
+}
+.theme-button {
+    .elementor-button {
+        background-color: transparent !important;
+        font-size: inherit !important;
+        padding: 0px !important;
+        border-radius: 0px !important;
+        color: unset !important;
+        fill: unset !important;
+
+        .elementor-button-content-wrapper {
+
+            color: $white;
+            @extend .btnd;    
+            padding: 20px 49px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0px 8px 16px 0px rgba(239, 201, 76, 0.3);
+            background-color: $second-color;
+            border: 1px solid $second-color;
+            transition: all .3s ease-in-out;
+        
+            @media (max-width: 580px) {
+                padding: 16px 35px;
+            }
+        
+            @media (max-width: 480px) {
+                padding: 15px 30px;
+                font-size: 15px;
+            }
+        
+            &.no-fil {
+                background-color: transparent;
+                border-color: rgba($color: #fff, $alpha: 0.2);        
+                box-shadow: inherit;
+                margin-left: 15px;
+        
+                @media (max-width: 500px) {
+                    margin-left: 0;
+                }
+        
+                &:hover {
+                    background-color: $second-color;
+                    border: 1px solid $second-color;
+                }
+            }
+        
+            &.black {
+                background-color: $theme-color;
+                border-color: $theme-color;
+                box-shadow: inherit;
+        
+                &:hover {
+                    background-color: $second-color;
+                    border: 1px solid $second-color;            
+                }
+            }
+        
+            &.minimal-btn {
+                color: #727475;
+                border: 1px solid #ebebeb;
+                background: transparent;
+                box-shadow: inherit;
+            }
+        
+            &:hover {
+                background-color: $theme-color;
+                border: 1px solid $theme-color;
+                box-shadow: inherit;
+                color: $white;
+            }
+
+        }
+    }
+}
+
+.video-btn {
+    @extend .btnd;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: $second-color;
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.video-play-btn {    
+
+    .play-video {        
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        color: $third-color;
+        line-height: 122px;
+        transition: all .3s ease-in-out;
+        text-align: center;
+        animation: playVideo infinite 3.5s;
+        display: inline-block;
+        margin: 0px auto;
+        font-size: 18px;
+        box-shadow: 0px 16px 32px 0px rgba(51, 51, 51, 0.04);
+
+        @media (max-width: 767px) {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+    
+        &:hover {
+            color: $theme-color;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    .play-text {
+        font-weight: 700;
+    }
+}
+
+
+.cat-btn {
+    font-size: 16px;
+    line-height: 1;
+    padding: 20px 30px;
+    font-weight: 700;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba($color: #fff, $alpha: .20);
+    transition: all .3s ease-in-out;
+    background: transparent;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 30px;
+
+    i {
+        margin-right: 10px;
+    }
+
+    &.color {
+        background-color: #00baa3;
+        border-color: #00baa3;
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: #00baa3;
+        border-color: #00baa3;
+        border-style: solid;
+        border-width: 1px;
+    }
+}

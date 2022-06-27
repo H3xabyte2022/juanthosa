@@ -1,0 +1,113 @@
+
+.single-testimonial-card { 
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    padding: 0px 35px 60px;
+    margin-top: 80px;
+
+    @media (max-width: 767px) {
+        padding: 0px 30px 40px;
+    }
+
+    &:hover {
+        box-shadow: 0px 10px 35px 0px rgba(38, 42, 76, 0.1);
+    }
+
+    .client-img { 
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #f8f8f8;
+        box-shadow: 0px 10px 35px 0px rgba(38, 42, 76, 0.1);
+        margin: 0 auto;
+        display: inline-block;
+        margin-top: -50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .client-info { 
+        margin-top: 15px;
+
+        h4 { 
+            margin-bottom: 5px;
+            text-transform: capitalize;
+        }
+
+        span { 
+        }
+    }
+
+    .feedback { 
+        padding-top: 20px;
+        position: relative;
+        margin-top: 20px;
+
+        &::before {
+            position: absolute;
+            content: "\f10e";
+            left: 50%;
+            top: 0;
+            font-family: $fa;
+            color: $second-color;
+            font-size: 20px;
+            font-weight: 400;
+            transform: translateX(-50%);
+        }
+
+        p { 
+            margin: 20px 0px;
+        }
+
+        .star { 
+            color: $third-color;
+            line-height: 1;
+
+            span {
+                margin: 0 1px;
+            }
+        }
+    }
+}
+
+.testimonial-carousel-active {
+    margin-top: -30px;
+
+    .single-testimonial-card {
+        padding: 0px 20px 30px;
+        background-color: #fff;
+    }
+
+    .slide-dots {
+        margin-bottom: -15px;
+    }
+
+}
+
+.slide-dots{
+    text-align: center;
+    li{
+      display: inline-block;
+      margin: 0 3px;
+      button{
+        position: relative;
+        text-indent: -9999px;
+        border: 1px solid $second-color;
+        border-radius: 30px;
+        width: 12px;
+        height: 12px;
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $second-color;
+        }
+      }
+      &.slick-active{
+        button{
+            background-color: $second-color;
+            border-color: $second-color;
+        }
+      }
+    }
+  }

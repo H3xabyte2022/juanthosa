@@ -1,0 +1,572 @@
+/* ----------------------------------
+   Hero Section - Styles
+ ------------------------------------ */
+$slick-dot-width: 20px;
+$slick-dot-height: 20px;
+$slick-dot-color: white;
+$slick-dot-color-active: $slick-dot-color;
+$slick-opacity-default: 0.75;
+$slick-opacity-on-hover: 1;
+$slick-opacity-not-active: 0.25;
+
+.hero-1 {
+	.single-slide {
+		padding-top: 160px;
+		padding-bottom: 200px;
+		background-position: top center;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+
+		@media (max-width: 991px) {
+			padding-top: 140px;
+			padding-bottom: 130px;
+		}
+
+		@media (max-width: 767px) {
+			padding-top: 100px;
+			padding-bottom: 120px;
+		}
+
+		.slide-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+
+			&::before, &::after {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				height: 100%;
+				content: "";
+				background-color: $theme-color;
+				opacity: 0.4;
+				z-index: 2;
+			}
+		}
+
+		.hero-contents {
+			position: relative;
+			z-index: 2;
+
+			h1 {
+				text-transform: capitalize;
+
+				@media (max-width: 767px) {
+					font-size: 40px;
+				}
+
+				span {
+					color: $third-color !important;
+					text-decoration: underline;
+				}
+			}
+
+			p {
+				margin-top: 50px;
+				display: block;
+
+				@media (max-width: 767px) {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	.slide-pop-video-box-wrapper {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 400px;
+		height: 130px;
+		background-color: $third-color;
+
+		@media (max-width: 767px) {
+			height: 90px;
+			width: 300px;
+		}
+
+		.text {
+			h6 {
+				margin-bottom: 0;
+				padding-left: 30px;
+				font-size: 16px;
+                text-transform: capitalize;
+
+				@media (max-width: 767px) {
+					font-size: 13px;
+					padding-left: 15px;
+				}
+			}
+		}
+
+		.video-wrapper {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 45%;
+			z-index: 1;
+
+			a {
+				font-size: 18px;
+			}
+		}
+	}
+
+	// Change animation presets
+	.single-slide [data-animation-in] {
+		opacity: 0;
+		animation-duration: 1s;
+		transition: opacity 0.5s ease 0.3s;
+		transition: 1s;
+	}
+
+	.slick-nav {
+		width: 44px;
+		height: 44px;
+		position: absolute;
+		cursor: pointer;
+		top: calc(50% - 44px);
+		&.prev-arrow {
+			left: 3%;
+			transform: scaleX(-1);
+			z-index: 999;
+		}
+		&.next-arrow {
+			left: auto;
+			right: 3%;
+		}
+		i {
+			display: block;
+			position: absolute;
+			margin: -10px 0 0 -10px;
+			width: 20px;
+			height: 20px;
+			left: 50%;
+			top: 50%;
+			&:before,
+			&:after {
+				content: "";
+				width: 10px;
+				height: 2px;
+				border-radius: 1px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background: #fff;
+				margin: -1px 0 0 -5px;
+				display: block;
+				transform-origin: 9px 50%;
+			}
+			&:before {
+				transform: rotate(-40deg);
+			}
+			&:after {
+				transform: rotate(40deg);
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 1px;
+			right: 1px;
+			top: 1px;
+			bottom: 1px;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 255, 255, 0.12);
+		}
+		svg {
+			width: 44px;
+			height: 44px;
+			display: block;
+			position: relative;
+			z-index: 1;
+			color: #fff;
+			stroke-width: 2px;
+			stroke-dashoffset: 126;
+			stroke-dasharray: 126 126 0;
+			transform: rotate(0deg);
+		}
+		&.animate {
+			svg {
+				animation: stroke 1s ease forwards 0.3s;
+			}
+			i {
+				animation: arrow 1.6s ease forwards;
+				&:before {
+					animation: arrowUp 1.6s ease forwards;
+				}
+				&:after {
+					animation: arrowDown 1.6s ease forwards;
+				}
+			}
+		}
+	}
+
+	.animated {
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.hero-2 {
+	.single-slide {
+		padding-top: 135px;
+		padding-bottom: 250px;
+		background-position: center;
+
+		@media (max-width: 991px) {
+			padding-top: 100px;
+			padding-bottom: 200px;
+		}
+
+		@media (max-width: 767px) {
+			padding-top: 80px;
+			padding-bottom: 160px;
+		}
+
+		@include overlay($theme-color, 0.6);
+
+		.hero-contents {
+			h1 {
+				color: #fff;
+				line-height: 1;
+				font-size: 100px;
+                text-transform: capitalize;
+
+				@media (max-width: 767px) {
+					font-size: 60px;
+				}
+
+				span {
+					display: block;
+					color: $second-color;
+					-webkit-text-fill-color: transparent;
+					-webkit-text-stroke-width: 1px;
+					-webkit-text-stroke-color: $second-color;
+				}
+			}
+
+			p {
+				color: #fff;
+				margin-top: 30px;
+
+				@media (max-width: 767px) {
+					font-size: 15px;
+					margin-top: 20px;
+					line-height: 25px;
+				}
+			}
+
+			a {
+				margin-top: 30px;
+				background-color: $third-color;
+				border-color: $third-color;
+
+				@media (max-width: 767px) {
+					font-size: 14px;
+				}
+
+				i {
+					margin-left: 6px;
+				}
+
+				&:hover {
+					background-color: $second-color;
+					border-color: $second-color;
+				}
+			}
+		}
+	}
+
+	.site-watermark-icon {
+		position: absolute;
+		right: 10%;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: -1;
+		opacity: 0.5;
+	}
+
+	// Change animation presets
+	.single-slide [data-animation-in] {
+		opacity: 0;
+		animation-duration: 1.5s;
+		transition: opacity 0.5s ease 0.3s;
+		transition: 1s;
+	}
+
+	.slick-nav {
+		width: 44px;
+		height: 44px;
+		position: absolute;
+		cursor: pointer;
+		top: calc(50% - 44px);
+		&.prev-arrow {
+			left: 3%;
+			transform: scaleX(-1);
+			z-index: 999;
+		}
+		&.next-arrow {
+			left: auto;
+			right: 3%;
+		}
+		i {
+			display: block;
+			position: absolute;
+			margin: -10px 0 0 -10px;
+			width: 20px;
+			height: 20px;
+			left: 50%;
+			top: 50%;
+			&:before,
+			&:after {
+				content: "";
+				width: 10px;
+				height: 2px;
+				border-radius: 1px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background: #fff;
+				margin: -1px 0 0 -5px;
+				display: block;
+				transform-origin: 9px 50%;
+			}
+			&:before {
+				transform: rotate(-40deg);
+			}
+			&:after {
+				transform: rotate(40deg);
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 1px;
+			right: 1px;
+			top: 1px;
+			bottom: 1px;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 255, 255, 0.12);
+		}
+		svg {
+			width: 44px;
+			height: 44px;
+			display: block;
+			position: relative;
+			z-index: 1;
+			color: #fff;
+			stroke-width: 2px;
+			stroke-dashoffset: 126;
+			stroke-dasharray: 126 126 0;
+			transform: rotate(0deg);
+		}
+		&.animate {
+			svg {
+				animation: stroke 1s ease forwards 0.3s;
+			}
+			i {
+				animation: arrow 1.6s ease forwards;
+				&:before {
+					animation: arrowUp 1.6s ease forwards;
+				}
+				&:after {
+					animation: arrowDown 1.6s ease forwards;
+				}
+			}
+		}
+	}
+
+	.animated {
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.hero-3 {
+	position: relative;
+
+	.single-slide {
+		padding: 200px 0px 185px;
+        overflow: hidden;
+
+		@media (max-width: 1300px) {
+			padding: 150px 0px 135px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 100px 0px;
+		}
+
+		@include overlay($theme-color, 0.7);
+
+		.hero-contents {
+			position: relative;
+
+			h1 {
+				color: #fff;
+				font-size: 90px;
+				margin-top: -10px;
+				line-height: 1.3;
+                text-transform: capitalize;
+
+				@media (max-width: 991px) {
+					font-size: 70px;
+				}
+
+				@media (max-width: 767px) {
+					font-size: 48px;
+				}
+
+				@media (max-width: 500px) {
+					font-size: 40px;
+				}
+			}
+
+			p {
+				color: #fff;
+				font-size: 20px;
+				font-weight: 500;
+				margin-bottom: 30px;
+				position: relative;
+				padding-left: 40px;
+				display: inline-block;
+
+				@media (max-width: 991px) {
+					font-size: 18px;
+				}
+
+				@media (max-width: 767px) {
+					&::before,
+					&::after {
+						display: none !important;
+					}
+				}
+
+				&::before {
+					border-radius: 50%;
+					width: 9px;
+					height: 9px;
+					background-color: #fff;
+					content: "";
+					left: 6px;
+					top: 50%;
+					transform: translateY(-50%);
+					position: absolute;
+					display: inline-block;
+				}
+
+				&::after {
+					border-radius: 50%;
+					width: 21px;
+					height: 21px;
+					background-color: transparent;
+					content: "";
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					position: absolute;
+					display: inline-block;
+					border: 2px solid #fff;
+				}
+			}
+
+			a {
+				margin-top: 35px;
+				margin-right: 20px;
+				color: #fff;
+
+				@media (max-width: 991px) {
+					margin-top: 25px;
+					margin-right: 15px;
+				}
+
+				@media (max-width: 767px) {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		bottom: 25px;
+		list-style: none;
+		display: block;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0 5px;
+			padding: 0;
+			cursor: pointer;
+			button {
+				border: 0;
+				display: block;
+				outline: none;
+				line-height: 0px;
+				font-size: 0px;
+				color: transparent;
+				padding: 5px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				&:hover,
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.transland-dots {
+		.slick-dots {
+			li {
+				height: 3px;
+				width: 50px;
+				button {
+					position: relative;
+					background-color: $slick-dot-color;
+					opacity: $slick-opacity-not-active;
+					width: 50px;
+					height: 3px;
+					padding: 0;
+					&:hover,
+					&:focus {
+						opacity: $slick-opacity-on-hover;
+					}
+				}
+				&.slick-active button {
+					color: $slick-dot-color-active;
+					opacity: $slick-opacity-default;
+					&:hover,
+					&:focus {
+						opacity: $slick-opacity-on-hover;
+					}
+				}
+			}
+		}
+	}
+
+	// Change animation presets
+	.single-slide [data-animation-in] {
+		opacity: 0;
+		animation-duration: 1.8s;
+		transition: opacity 0.6s ease 0.4s;
+		transition: 1.2s;
+	}
+
+	.animated {
+		transition: all 0.8s ease-in-out;
+	}
+}

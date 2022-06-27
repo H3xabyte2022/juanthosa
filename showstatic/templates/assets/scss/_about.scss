@@ -1,0 +1,168 @@
+.about-info-contents {
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 30px;
+    padding-bottom: 70px;
+    margin-top: 30px;
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.about-img {
+    img {
+        @media (max-width: 767px) {
+            width: 70%;
+        }
+    }
+}
+
+.company-ceo { 
+    background-color: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(51, 51, 51, 0.04);
+    position: relative;
+    padding: 15px;
+    margin-right: 50px;
+    margin-top: -40px;
+
+    @media (max-width: 767px) {
+        margin-right: 0;
+    }
+
+	.ceo-img { 
+        width: 70px;
+        height: 70px;
+        float: left;
+        overflow: hidden;
+        background-color: #eee;
+        margin-right: 20px;
+	}
+
+	.ceo-info { 
+        overflow: hidden;
+
+		h5 { 
+            margin-bottom: 0;
+		}
+
+		span { 
+
+		}
+	}
+
+	.autograph-signature { 
+        position: absolute;
+        right: 50px;
+        top: -30px;
+
+        @media (max-width: 767px) {
+            right: 0px;
+            top: auto;
+            bottom: -30px;
+        }
+
+		img { 
+            @media (max-width: 767px) {
+                width: 70%;
+                margin-right: -10px;
+            }
+		}
+	}
+}
+.about-img-gallery {
+    position: relative;
+
+    .about-img-left {
+        border-style: solid;
+        border-width: 6px;
+        border-color: rgb(255, 255, 255);
+        background-color: rgb(235, 235, 235);
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.2);
+        width: 188px;
+        height: 188px;
+        position: absolute;
+        z-index: 1;
+        top: -30px;
+
+        @media (max-width: 767px) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .about-img-center {
+        width: 75%;
+        height: 550px;
+        position: relative;
+        z-index: 0;
+        background-color: #eee;
+        margin: 0px auto;
+
+        @media (max-width: 767px) {
+            width: 85%;
+        }
+    }
+
+    .about-img-right {
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(255, 255, 255);
+        background-color: rgb(235, 235, 235);
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+
+        @media (max-width: 767px) {
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+.about-ceo { 
+    margin-top: 40px;
+    position: relative;
+
+	.ceo-img { 
+        width: 70px;
+        height: 70px;
+        float: left;
+        overflow: hidden;
+        background-color: #eee;
+        margin-right: 20px;
+        border-radius: 50%;
+	}
+
+	.ceo-info { 
+        overflow: hidden;
+
+		h5 { 
+            margin-bottom: 0;
+		}
+
+	}
+
+	.autograph-signature {
+        position: absolute;
+        right: 50px;
+        top: 0;
+
+        @media (max-width: 767px) {
+            right: 0px;
+        }
+
+        @media (max-width: 575px) {
+            position: relative;
+
+            img {
+                max-width: 30%;
+                margin-top: 10px;
+            }
+        }
+	}
+}

@@ -1,0 +1,429 @@
+.team-member-card { 
+    height: 340px;
+    background-color: #eee;
+    position: relative;
+    background-position: top center;
+    margin-top: 30px;
+
+    &:hover {
+        .profile-info-card { 
+            right: -10px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+	.profile-info-card { 
+        background: $third-color;
+        padding: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s ease-in-out;
+
+        &::before {
+            width: 0;
+            height: 0;
+            border-top: 10px solid #ffbdb7;
+            border-right: 10px solid transparent;
+            content: "";
+            right: 0;
+            position: absolute;
+            bottom: -10px;
+        }
+
+		span { 
+            font-size: 14px;
+            line-height: 1;
+            color: #fff;
+		}
+
+		h5 { 
+            color: #fff;
+
+            &:hover {
+                a {
+                    color: $theme-color;
+                }
+            }
+		}
+
+		.social-link {
+            margin-top: 15px;
+
+			a { 
+                line-height: 1;
+                margin-right: 15px;
+                font-size: 16px;
+                color: #fff;
+                display: inline-block;
+
+                &:hover {
+                    color: $theme-color;
+                }
+			}
+		}
+	}
+}
+
+
+.single-team-member {
+    transition: all .35s ease-in-out;
+    position: relative;
+    margin-top: 30px;
+    height: 400px;
+    width: 100%;
+    background-color: $section-bg;
+    overflow: hidden;
+    @include overlay($theme-color, 0.1);
+
+    @media (max-width: 767px)
+    {
+        background-position: top center;    
+    }
+
+    .social-icons {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        content: "";
+        overflow: hidden;
+        display: inline-block;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            .plus-icon {
+                background-color: $third-color;
+                
+                i {
+                    transform: rotate(45deg);
+                    color: #fff;
+                }
+            }
+
+            .top {
+                transform: translateX(0);
+            }
+            
+            .right {
+                transform: translateY(0);
+            }
+        }
+
+        .plus-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            cursor: pointer;
+
+            i {
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .plus-icon, a {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            display: inline-block;
+            background: #fff;
+            color: $second-color;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background: $second-color;
+                color: #fff;
+            }
+        }
+
+        .top {
+            transform: translateX(100%);
+            margin-right: 50px;
+            transition: all .4s ease-in-out;
+            height: 50px;
+           > a {
+               margin-right: 10px;
+           }
+        }
+
+        .right {
+            transform: translateY(-100%);
+            transition: all .4s ease-in-out;
+            width: 50px;
+            float: right;
+            
+           a {
+               margin-top: 10px;
+               display: block;
+           }
+        }
+    }
+
+    .member-details {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        content: "";       
+
+        h3 {
+            color: $second-color;
+            background: #fff;
+            padding: 15px 25px;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-bottom: 0;
+
+            @media (max-width: 767px) {
+                font-size: 18px;
+                padding: 15px 25px;
+            }
+        }
+
+        span {
+            padding: 8px 25px;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1;
+            background: $second-color;
+            display: inline-block;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    }
+}
+
+
+.team-member-details-wrapper {
+    
+    .container {
+       background-color: $section-bg;
+       box-shadow: $box-shadow;
+       padding: 50px;
+
+       @media (max-width: 767px) {
+           padding: 20px;
+       }
+    }
+
+    .icon-box {
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 85px 30px;
+
+        @media (max-width: 576px) {
+            padding: 50px 20px;
+        }
+
+        .icon {
+            margin-bottom: 20px;
+            font-size: 80px;
+            color: $third-color;
+
+            @media (max-width: 576px) {
+                font-size: 60px;
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 0;
+
+            @media (max-width: 576px) {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.contact-form7-wrapper {
+    margin-top: 30px;
+
+    .contact-form {
+        padding: 50px 30px;
+        background-color: #fff;
+
+        form {
+            textarea {
+                height: 150px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.biography-info {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+
+    p {
+         margin-bottom: 30px;
+    }
+
+    .single-bio-data {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        text-transform: capitalize;
+        margin-top: 5px;
+
+        @media (max-width: 767px) {
+           width: 80%;
+        }
+
+        .key-data {
+            font-weight: 500;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: ":";
+                right: 10px;
+            }
+        }
+    }
+}
+
+.member-profile-wrapper {
+    background-color: #fff;
+
+    .member-profile-img {
+        height: 340px;
+        background-position: top;
+
+        @media (max-width: 767px) {
+            height: 300px;
+        }
+
+        @media (max-width: 585px) {
+            height: 280px;
+        }
+    }
+
+    .member-info { 
+        max-width: 500px;
+        position: relative;
+        padding-bottom: 15px;
+
+        @media (max-width: 1100px) {
+            max-width: 400px;
+        }
+
+        @media (max-width: 991px) {
+            max-width: 320px;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 450px;
+            margin: 0;
+        }
+
+        @media (max-width: 576px) {
+            display: block;
+            max-width: 100%;
+        }
+
+        @media (min-width: 1440px) {
+            &::before {
+                position: absolute;
+                content: "";
+                right: -8%;
+                top: 0;
+                height: 100%;
+                width: 1px;
+                background: #EBEDF2;
+            }                
+        }
+
+        @media (max-width: 767px) {
+            padding: 30px;
+        }
+
+        h2 { 
+            font-size: 36px;
+            margin-bottom: 5px;
+
+            @media (max-width: 991px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 26px;
+            }
+        }
+    
+        p { 
+            margin-top: 30px;
+
+            @media (max-width: 767px) {
+                margin-top: 20px;
+            }
+
+            @media (max-width: 576px) {
+                margin-top: 10px;
+            }
+        }
+    
+        .social-profiles { 
+            margin-top: 20px;
+
+            a { 
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border: 1px solid #EBEDF2;
+                margin-right: 10px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    } 
+
+    .member-contact-info {
+        margin-right: 50px;
+
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+            margin: 0;
+        }
+
+        @media (max-width: 576px) {
+            display: block;
+            width: 100%;
+            padding: 0 15px;
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 1100px) {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .single-contact {
+            margin-top: 15px;
+        }
+
+        h6 {
+            margin-bottom: 5px;
+        }
+    }
+
+
+}
+
+.skill-bars {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    padding-bottom: 70px;
+}

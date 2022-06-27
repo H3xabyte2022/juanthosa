@@ -1,0 +1,265 @@
+.single-price-bar {
+    border-top: 1px solid #eaeaea;
+    padding: 35px 15px;
+
+    @media (max-width: 1199px) {
+        text-align: center;
+        .package-name, .package-price { 
+            margin-bottom: 20px;
+        }
+
+        .package-features {
+            margin-bottom: 30px;
+            
+            span {
+                display: block;
+                margin: 2px 0px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.active {
+        h1, h3, h2, h5, h6, a, p, span {
+            color: #fff !important
+        }
+        background: $second-color;
+        border-color: $second-color;
+
+        .theme-btn {
+            &:hover {
+                background-color: #fff;
+                border-color: #fff;
+                color: $second-color !important;
+            }
+        }
+    }
+    
+    .package-name { 
+
+        h3 { 
+            margin-bottom: 0;
+            text-transform: capitalize;
+        }
+    }
+
+    .package-features { 
+
+        span { 
+            position: relative;
+            padding-right: 10px;
+            text-transform: capitalize;
+
+            &::after {
+                position: absolute;
+                content: ",";
+                right: 0;
+            }
+
+            &:last-of-type {
+                &::after { 
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .package-price { 
+
+        h2 { 
+            margin-bottom: 0;
+
+
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
+
+            span { 
+                font-size: 56px;
+                margin-right: 15px;
+
+                @media (max-width: 1400px) {
+                    font-size: 46px;
+                    margin-right: 10px;
+                }
+
+                @media (max-width: 767px) {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .theme-btn {
+
+        &:hover {
+            background: $third-color;
+            border-color: $third-color;
+        }
+
+        i {
+            margin-left: 15px;
+        }
+    }
+}
+
+.single-pricing-plan { 
+    background-color: $section-bg;
+    position: relative;
+    padding: 60px;
+    margin-top: 30px;
+
+    @media (max-width: 1199px) {
+        padding: 40px 30px;
+    }
+
+
+    &.plan-1, &.plan-4 {
+        .theme-btn {
+            background-color: $third-color;
+            border-color: $third-color;
+
+            &:hover {
+                background-color: $second-color;
+                border-color: $second-color;
+            }
+        }
+    }
+
+    &.plan-3, &.plan-6 {
+        .theme-btn {
+            background-color: $theme-color;
+            border-color: $theme-color;
+
+            &:hover {
+                background-color: $second-color;
+                border-color: $second-color;
+            }
+        }
+    }
+
+    &.active {
+        background-color: $theme-color;
+
+        .theme-btn {
+            background-color: $second-color;
+            border-color: $second-color;
+
+            &:hover {
+                background-color: $third-color;
+                border-color: $third-color;
+            }
+        }
+
+        .plan-title { 
+            h2 {
+                color: $white !important;
+            }
+        }
+
+        .plan-value { 
+            color: #fff;
+
+            span {
+                color: $third-color;
+            }
+        }
+
+        li {
+            color: #a5b8c7;
+        }
+    }
+
+	.plan-title { 
+
+		h2 { 
+            text-transform: capitalize;
+            margin-top: -5px;
+
+            @media (max-width: 767px) {
+                font-size: 24px;
+            }
+		}
+	}
+
+	.plan-value { 
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+
+		span { 
+            display: block;
+            font-size: 80px;
+            font-family: $heading-font;
+            color: $theme-color;
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -3px;
+            margin-bottom: 10px;
+
+            @media (max-width: 767px) {
+                font-size: 60px;
+            }
+		}
+	}
+
+	.plan-buy-btn { 
+        position: relative;
+        z-index: 1;
+        padding-top: 15px;
+        font-size: 16px;
+
+        &::before {
+            position: absolute;
+            left: -15%;
+            top: 0;
+            background-color: #fff;
+            width: 130%;
+            height: 70%;
+            z-index: -1;
+            content: "";
+
+            @media (max-width: 767px) {
+                left: -7%;
+                width: 114%;
+            }
+        }
+
+		.theme-btn { 
+            margin-top: 10px;
+
+            i {
+                margin-left: 8px;
+            }
+		}
+	}
+
+	.plan-service-list { 
+        margin-top: 40px;
+        display: block;
+
+		li { 
+            margin-top: 12px;
+            position: relative;
+            font-size: 17px;
+
+            &.no, &.not {
+                &::before { 
+                    content: "\f00d";
+                }
+            }
+
+            &::before {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-family: $fa;
+                content: "\f00c";
+                opacity: .5;
+            }
+		}
+	}
+}
