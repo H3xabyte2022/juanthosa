@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,27 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="modinatheme">
     <!-- ======== Page title ============ -->
-    <title>Transland - Transport & Logistics HTML Template</title>
+    <title>Juanthosa</title>
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="{% static '/assets/img/favicon.png' %}">
     <!-- ===========  All Stylesheet ================= -->
     <!--  Icon css plugins -->
-    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
     <!--  animate css plugins -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
     <!--  slick css plugins -->
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
     <!--  magnific-popup css plugins -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
     <!-- metis menu css file -->
-    <link rel="stylesheet" href="assets/css/metismenu.css">
+    <link rel="stylesheet" href="{% static 'assets/css/metismenu.css' %}">
+    <!-- select2 css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select2.css' %}">
     <!--  Bootstrap css plugins -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <!--  main style css file -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- template main style css file -->
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body class="body-wrapper">    
@@ -88,18 +90,18 @@
     <div class="top-bar-wrapper d-none d-sm-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="top-left">
-                <a href="tel:57322888888"><i class="fal fa-phone-volume"></i>57322888888</a>
-                <a href="mailto:info@juanthosa.com"><i class="fal fa-envelope"></i>info@juanthosa.com</a>
-                <a href="#"><i class="fal fa-map-marker-alt"></i>Mitú, Vaupés</a>
+                <a href="tel:573123911413"><i class="fal fa-phone-volume"></i>573123911413</a>
+                <a href="mailto:solicitudes@juanthosa.com"><i class="fal fa-envelope"></i>solicitudes@juanthosa.com</a>
+                <a href="/contacto"><i class="fal fa-map-marker-alt"></i>Mitú, Vaupés</a>
             </div>
             <div class="top-right d-none d-md-block">
-                <div class="social-pages">
+                {% comment %} <div class="social-pages">
                     <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> 
                     <a href="#"><i class="fab fa-skype" aria-hidden="true"></i></a> 
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>
@@ -108,8 +110,8 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-3 col-sm-5 col-md-4 col-6 pr-lg-5">
                     <div class="logo">
-                        <a href="index.html">
-                        <img src="assets/img/logo.png"  alt="Transland">       
+                        <a href="/">
+                            <img src="{% static '/assets/img/logo.png' %}">             
                         </a>
                     </div>
                 </div>
@@ -117,36 +119,37 @@
                     <div class="menu-wrap">
                         <div class="main-menu">
                             <ul>
-                                <li><a href="#">Inicio <i class="fas fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Inicio 1</a></li>
+                                <li><a href="/">Inicio </a>
+                                  <!--   <ul class="sub-menu">
+                                        <li><a href="/">Inicio 1</a></li>
                                         <li><a href="index-2.html">Inicio 2</a></li>
                                         <li><a href="index-3.html">Inicio 3</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
-                                <li><a href="about.html">About</a> </li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="#">Pages <i class="fas fa-angle-down"></i></a>
+                                <li><a href="/about">Nuestra empresa</a> </li>
+                                <li><a href="/transporte-fluvial">Servicios</a></li>
+                                <li><a href="#">Info  <i class="fas fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="faq.html">faq</a></li>
-                                        <li><a href="team.html">team</a></li>
-                                        <li><a href="pricing.html">pricing</a></li>
+                                      
+                                        <li><a href="/contacto">Enviar solicitud</a></li>
+                                        <li><a href="/mision">Mision</a></li>
+                                        <li><a href="/vision">Vision</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                {% comment %} <li><a href="#">Noticias</a></li> {% endcomment %}
+                                <li><a href="/contacto">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="header-right-element">
-                        <a href="contact.html" class="theme-btn">Cotizar ya  <i class="fal fa-long-arrow-right"></i></a>
-                        <a href="#" class="search-btn"><i class="fal fa-search"></i></a>
+                        <a href="/contacto" class="theme-btn">Enviar solicitud <i class="fal fa-long-arrow-right"></i></a>
+                       {% comment %}  <a href="#" class="search-btn"><i class="fal fa-search"></i></a>
                         <div class="search-box">
                             <form action="#">
                                 <input type="text" placeholder="Search">
                                 <button type="submit"><i class="fal fa-search"></i></button>
                             </form>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
                 <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
@@ -159,25 +162,25 @@
                             </button>
                             <nav class="sidebar-nav">
                                 <ul class="metismenu" id="mobile-menu">
-                                    <li><a class="has-arrow" href="#">Homes</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Homepage 1</a></li>
+                                    <li><a class="has-arrow" href="/">Inicio</a>
+                                       <!--  <ul class="sub-menu">
+                                            <li><a href="/">Homepage 1</a></li>
                                             <li><a href="index-2.html">Homepage 2</a></li>
                                             <li><a href="index-3.html">Homepage 3</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li><a href="services.html">services</a></li>
+                                    <li><a href="/about">Acerca de</a></li>
+                                    <li><a href="/transporte-fluvial/">Servicios</a></li>
                                     <li>
-                                        <a class="has-arrow" href="#">Pages</a>
+                                        <a class="has-arrow" href="#">Info</a>
                                         <ul class="sub-menu">
-                                            <li><a href="faq.html">faq</a></li>
-                                            <li><a href="services-details.html">services details</a></li>
-                                            <li><a href="team.html">Team</a></li>
+                                           <li><a href="/contacto">Solicitar</a></li>
+                                            <li><a href="/mision">Mision</a></li>
+                                            <li><a href="/vision">Vision</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                   
+                                    <li><a href="/contacto">Contacto</a></li>
                                 </ul>
                             </nav>
 
@@ -187,8 +190,8 @@
                                         <i class="fal fa-map-marked-alt"></i>
                                     </div>
                                     <div class="text">
-                                        <h5>visit our location:</h5>
-                                        <span>West Jakarta City, UK</span>
+                                        <h5>Nos ubicamos en:</h5>
+                                        <span>Mitu, vaupes, CO</span>
                                     </div>
                                 </div>
                                 <div class="single-info-element">
@@ -196,8 +199,8 @@
                                         <i class="fal fa-clock"></i>
                                     </div>
                                     <div class="text">
-                                        <h5>Opening Hours:</h5>
-                                        <span>Mon-Fri 8am-5pm</span>
+                                        <h5>Atencion:</h5>
+                                        <span>Lunes-Viernes 7am-12pm y 2pm- 5pm, Sabados 7am-12pm en Teléfono y Oficina</span>
                                     </div>
                                 </div>
                                 <div class="single-info-element">
@@ -205,8 +208,8 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="text">
-                                        <h5>Send us mail</h5>
-                                        <span>info@juanthosa.com</span>
+                                        <h5>Envianos un correo</h5>
+                                        <span>solicitudes@juanthosa.com</span>
                                     </div>
                                 </div>
                                 <div class="call-us">
@@ -214,11 +217,11 @@
                                         <i class="fal fa-phone-volume"></i>
                                     </div>
                                     <div class="text">
-                                        <h5>Troll fre number</h5>
-                                        <span>+09 949 858327</span>
+                                        <h5>O llama al</h5>
+                                        <span>+57 3123911413</span>
                                     </div>
                                 </div>
-                                <a href="contact.html" class="theme-btn mt-4">Track Your Shipment</a>
+                                <a href="/contacto" class="theme-btn mt-4">Contacto</a>
                             </div>
                         </div> 
                     </div>
@@ -231,7 +234,7 @@
     <div class="page-banner-wrap text-center bg-cover" style="background-image: url('assets/img/page-banner.jpg')">
         <div class="container">
             <div class="page-heading text-white">
-                <h1>404</h1>
+                <h1>Página en construcción</h1>
             </div>
         </div>
     </div>
@@ -239,7 +242,7 @@
         <div class="container">
             <nav>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                  <li class="breadcrumb-item"><a href="/">Inicio</a></li>
                   <li class="breadcrumb-item active" aria-current="page">404</li>
                 </ol>
             </nav>
@@ -252,9 +255,9 @@
                 <div class="col-12 text-center">
                     <div class="error-content">
                         <img src="assets/img/404.png" alt="">
-                        <h2>Oops! this page is not found.</h2>
-                        <p>Sorry but the page you're looking for may broken or not created</p>
-                        <a href="index.html" class="theme-btn mt-30"><i class="fal fa-long-arrow-left me-1"></i> Go Back to Inicio</a>
+                        <h2>Oops! este modulo se encuentra en construccion.</h2>
+                        <p>Pronto estará disponible</p>
+                        <a href="/" class="theme-btn mt-30"><i class="fal fa-long-arrow-left me-1"></i> Ir de vuelta a el Inicio</a>
                     </div>
                 </div>
             </div>
@@ -267,32 +270,21 @@
                 <div class="row">
                     <div class="col-sm-6 col-xl-3">
                         <div class="about-transland pe-md-5 pe-xl-0">
-                            <a href="index.html">
-                                <img src="assets/img/footer-logo.png" alt="transland">
+                            <a href="/">
+                                <img src="{% static 'assets/img/footer-logo.png'  %}">
                             </a>
-                            <p>Transland Logistics Services is a global supplier of transport and logistics solutions. We have offices in more than 20 countries and agents.</p>
+                            <p>JUANTHOSA RED S.A.S. es Empresa comprometida con la prestación eficiente de los servicios de transporte especial de pasajeros y carga en la modalidad terrestre, fluvial y aérea para todos los usuarios de las zonas rurales de difícil acceso, comunidades dispersas, resguardos, comunidades indígenas y afrodescendientes de la región de la Orinoquia Colombiana.</p>
                         </div>
                     </div>
 
                     <div class="col-sm-6 col-xl-2">
-                        <div class="single-footer-wid ps-xl-4">
-                            <div class="wid-title">
-                                <h6>Our Divisions</h6>
-                            </div>
-                            <ul>
-                                <li><a href="about.html">What We Do</a></li>
-                                <li><a href="contact.html">Request a Freight</a></li>
-                                <li><a href="services.html">Track & Trace</a></li>
-                                <li><a href="services.html">Rail Freight</a></li>
-                                <li><a href="services.html">Maritime Transport</a></li>
-                            </ul>
-                        </div>
+                       
                     </div>
 
-                    <div class="col-sm-6 col-xl-2">
+                   <!--  <div class="col-sm-6 col-xl-2">
                         <div class="single-footer-wid ps-xl-2">
                             <div class="wid-title">
-                                <h6>Our Services</h6>
+                                <h6>Servicios</h6>
                             </div>
                             <ul>
                                 <li><a href="#">What We Do</a></li>
@@ -318,11 +310,11 @@
                             </ul>
                         </div>
                     </div>
-
+ -->
                     <div class="col-sm-6 col-xl-3">
                         <div class="single-footer-wid site-info-widget">
                             <div class="wid-title">
-                                <h6>Get In Touch</h6>
+                                <h6>Contacto</h6>
                             </div>
                             <div class="get-in-touch">
                                 <div class="single-contact-info">
@@ -330,7 +322,7 @@
                                         <i class="fal fa-map-marker-alt"></i>
                                     </div>
                                     <div class="contact-info">
-                                        <span>94 Roa Malaka, West Jakarta City, UK</span>
+                                        <span>Mitú, Vaupés</span>
                                     </div>
                                 </div>
                                 <div class="single-contact-info">
@@ -338,7 +330,7 @@
                                         <i class="fal fa-phone"></i>
                                     </div>
                                     <div class="contact-info">
-                                        <span>+91-7687287658</span>
+                                        <span>+573123911413</span>
                                     </div>
                                 </div>
                                 <div class="single-contact-info">
@@ -346,17 +338,17 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="contact-info">
-                                        <span>info@juanthosa.com</span>
+                                        <span>solicitudes@juanthosa.com</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="newsletter_widget">
                                 <div class="newsletter_box">
-                                    <form action="#">
-                                        <input type="email" placeholder="Enter email address" required>
+                                    {% comment %} <form action="#">
+                                        <input type="email" placeholder="Ingresa tu correo" required>
                                         <button class="submit-btn" type="submit"><i class="fas fa-envelope-open"></i></button>
-                                    </form>
+                                    </form> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -372,40 +364,46 @@
                     <div class="row">
                         <div class="col-md-6 col-12">
                             <div class="copy-rights">
-                                <p>&copy;2022 <strong>Transland</strong>, All Rights Reserved</p>
+                                <p>&copy;2022 <strong>Juanthosa</strong>, Todos los derechos reservados</p>
                             </div>
                         </div>
+                        <div class="text">
+                            <h5>Atencion:</h5>
+                            <span>Lunes-Viernes 7am-12pm y 2pm- 5pm, Sabados 7am-12pm en Teléfono y Oficina</span>
+                        </div>
                         <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">
-                            <div class="social-links">
+                            {% comment %} <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                                 <a href="#"><i class="fab fa-youtube"></i></a>
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>   
-
+     
+    {% static '/assets/img/favicon.png' %}
     <!--  ALl JS Plugins
     ====================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/modernizr.min.js"></script>
-    <script src="assets/js/jquery.easing.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imageload.min.js"></script>
-    <script src="assets/js/scrollUp.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/slick-animation.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/metismenu.js"></script>
-    <script src="assets/js/active.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.easing.js' %}"></script>
+    <script src="{% static '/assets/js/popper.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/assets/js/imageload.min.js' %}"></script>
+    <script src="{% static '/assets/js/scrollUp.min.js' %}"></script>
+    <script src="{% static '/assets/js/slick.min.js' %}"></script>
+    <script src="{% static '/assets/js/slick-animation.min.js' %}"></script>
+    <script src="{% static '/assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static '/assets/js/wow.min.js' %}"></script>
+    <script src="{% static '/assets/js/metismenu.js' %}"></script>
+    <script src="{% static '/assets/js/nice-select2.js' %}"></script>
+    <script src="{% static '/assets/js/active.js' %}"></script>
 </body>
 
 </html>

@@ -27,10 +27,18 @@ from django.urls import path
 from showstatic import views
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path('',views.home,name='index'),
+   path('', views.EmailAttachementView.as_view(), name='emailattachment'),
+   #path('',views.home,name='index'),
    path('about/',views.about,name='about'),
- 
+   path('transporte-fluvial/',views.transportefluv,name='transporte-fluvial'),
+   path('transporte-terrestre/',views.transporteterr,name='transporte-terrestre'),
+   path('transporte-aereo/',views.transporteaer,name='transporte-aereo'),
    path('download/<str:filename>/', views.download_pdf_file, name='download_pdf_file'),
+   path('contacto/', views.contact.as_view(), name='contact'),
+   path('pqrs/', views.contact.as_view(), name='contact'),
+   path('mision/', views.mision, name='mision'),
+   path('vision/', views.vision, name='vision'),
+   path('login/', views.login, name='login')
 ]
 
 """

@@ -1,0 +1,567 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="modinatheme">
+        <!-- ======== Page title ============ -->
+        <title>Juanthosa</title>
+        <!-- ========== Favicon Icon ========== -->
+        <link rel="shortcut icon" href="{% static '/assets/img/favicon.png' %}">
+        <!-- ===========  All Stylesheet ================= -->
+        <!--  Icon css plugins -->
+        <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+        <!--  animate css plugins -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+        <!--  slick css plugins -->
+        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+        <!--  magnific-popup css plugins -->
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+        <!-- metis menu css file -->
+        <link rel="stylesheet" href="{% static 'assets/css/metismenu.css' %}">
+        <!-- select2 css file -->
+        <link rel="stylesheet" href="{% static 'assets/css/nice-select2.css' %}">
+        <!--  Bootstrap css plugins -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <!--  main style css file -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <!-- template main style css file -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    </head>
+
+<body class="body-wrapper">    
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">                
+            </div>
+                <div class="txt-loading">
+                   <span data-text-preloader="T" class="letters-loading">
+                        J
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        U
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                       A
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                       T
+                    </span>
+                    <span data-text-preloader="L" class="letters-loading">
+                        H
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="D" class="letters-loading">
+                        A
+                    </span>
+                </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-bar-wrapper d-none d-sm-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="top-left">
+                <a href="tel:573123911413"><i class="fal fa-phone-volume"></i>573123911413</a>
+                <a href="mailto:solicitudes@juanthosa.com"><i class="fal fa-envelope"></i>solicitudes@juanthosa.com</a>
+                <a href="/contacto"><i class="fal fa-map-marker-alt"></i>Mitú, Vaupés</a>
+            </div>
+            <div class="top-right d-none d-md-block">
+                {% comment %} <div class="social-pages">
+                    <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> 
+                    <a href="#"><i class="fab fa-skype" aria-hidden="true"></i></a> 
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+    <header class="header-1">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-3 col-sm-5 col-md-4 col-6 pr-lg-5">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="{% static '/assets/img/logo.png' %}">             
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 text-end p-lg-0 d-none d-lg-flex justify-content-between align-items-center">
+                    <div class="menu-wrap">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="/">Inicio <i class="fas fa-angle-down"></i></a>
+                                  <!--   <ul class="sub-menu">
+                                        <li><a href="/">Inicio 1</a></li>
+                                        <li><a href="index-2.html">Inicio 2</a></li>
+                                        <li><a href="index-3.html">Inicio 3</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="/about">Nuestra empresa</a> </li>
+                                <li><a href="/transporte-fluvial">Servicios</a></li>
+                                <li><a href="#">Info  <i class="fas fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/pqrs">Pqrs</a></li>
+                                        <li><a href="/contacto">Enviar solicitud</a></li>
+                                        <li><a href="/mision">Mision</a></li>
+                                        <li><a href="/vision">Vision</a></li>
+                                    </ul>
+                                </li>
+                                {% comment %} <li><a href="#">Noticias</a></li> {% endcomment %}
+                                <li><a href="/contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-right-element">
+                        <a href="/contacto" class="theme-btn">Enviar solicitud <i class="fal fa-long-arrow-right"></i></a>
+                       {% comment %}  <a href="#" class="search-btn"><i class="fal fa-search"></i></a>
+                        <div class="search-box">
+                            <form action="#">
+                                <input type="text" placeholder="Search">
+                                <button type="submit"><i class="fal fa-search"></i></button>
+                            </form>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+                <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
+                    <div class="mobile-nav-wrap">
+                        <div id="hamburger"><i class="fal fa-bars"></i></div>
+                        <!-- mobile menu - responsive menu  -->
+                        <div class="mobile-nav">
+                            <button type="button" class="close-nav">
+                                <i class="fal fa-times-circle"></i>
+                            </button>
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu" id="mobile-menu">
+                                    <li><a class="has-arrow" href="/">Inicio</a>
+                                       <!--  <ul class="sub-menu">
+                                            <li><a href="/">Homepage 1</a></li>
+                                            <li><a href="index-2.html">Homepage 2</a></li>
+                                            <li><a href="index-3.html">Homepage 3</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li><a href="/about">Acerca de</a></li>
+                                    <li><a href="/transporte-fluvial/">Servicios</a></li>
+                                    <li>
+                                        <a class="has-arrow" href="#">Info</a>
+                                        <ul class="sub-menu">
+                                            
+                                            <li><a href="/contacto">Enviar solicitud</a></li>
+                                            <li><a href="/mision">Mision</a></li>
+                                            <li><a href="/vision">Vision</a></li>
+                                        </ul>
+                                    </li>
+                                   
+                                    <li><a href="/contacto">Contacto</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="action-bar text-white">
+                                <div class="single-info-element">
+                                    <div class="icon">
+                                        <i class="fal fa-map-marked-alt"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5>Nos ubicamos en:</h5>
+                                        <span>Mitú, Vaupés CO</span>
+                                    </div>
+                                </div>
+                                <div class="single-info-element">
+                                    <div class="icon">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5>Atencion:</h5>
+                                        <span>Lunes-Viernes 7am-12pm y 2pm- 5pm, Sabados 7am-12pm en Teléfono y Oficina</span>
+                                    </div>
+                                </div>
+                                <div class="single-info-element">
+                                    <div class="icon">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5>Envianos un correo</h5>
+                                        <span>solicitudes@juanthosa.com</span>
+                                    </div>
+                                </div>
+                                <div class="call-us">
+                                    <div class="icon text-white">
+                                        <i class="fal fa-phone-volume"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5>O llama al</h5>
+                                        <span>+57 3123911413</span>
+                                    </div>
+                                </div>
+                                <li><a href="/contacto">Solicitar</a></li>
+                                            <li><a href="/mision">Mision</a></li>
+                                            <li><a href="/about">Vision</a></li>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-banner-wrap text-center bg-cover" style="background-image: url({% static 'assets/img/services/road.jpg' %})">
+        <div class="container">
+            <div class="page-heading text-white">
+                <h1>Contacto</h1>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <nav>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <section class="contact-page-wrap section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-contact-card card1">
+                        <div class="top-part">
+                            <div class="icon">
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                            <div class="title">
+                                <h4>Email </h4>
+                                <span>Contactanos a cualquier hora</span>
+                            </div>
+                        </div>
+                        <div class="bottom-part">                            
+                            <div class="info">
+                                <p>solicitudes@juanthosa.com</p>
+                                
+                            </div>
+                            <div class="icon">
+                                <i class="fal fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-contact-card card2">
+                        <div class="top-part">
+                            <div class="icon">
+                                <i class="fal fa-phone"></i>
+                            </div>
+                            <div class="title">
+                                <h4>Teléfono</h4>
+                                <span>llamanos </span>
+                            </div>
+                        </div>
+                        <div class="bottom-part">                            
+                            <div class="info">
+                             
+                                <p>573123911413</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fal fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-contact-card card3">
+                        <div class="top-part">
+                            <div class="icon">
+                                <i class="fal fa-map-marker-alt"></i>
+                            </div>
+                            <div class="title">
+                                <h4>Oficinas </h4>
+                               
+                            </div>
+                        </div>
+                        <div class="bottom-part">                            
+                            <div class="info">
+                                <p>Mitú, Vaupés</p>
+                                <p>Colombia</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fal fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="block-contents mb-30 pt-60">
+                    <div class="section-title text-center">
+                        <h5 class="text-center">contact</h5>
+                        <span>Rellena el formulario</span>
+                        <h2>Habla <span>con nosotros</span></h2>
+                    </div>
+                </div>
+
+                <div class="col-xl-13 col-10">
+                    <div class="request-quote-form-wrapper mt-7 mt-xl-0 ms-xl-3">
+                        <h4>Datos </h4>
+                        <div class="request-quote-form">
+                           
+
+                            {% if error_message %}
+                            <div class="alert alert-primary" role="alert">
+                              {{error_message}}
+                            </div>
+                            {% endif %}
+                  
+                            {% if email_form %}
+                            <form method="POST" action ="" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              {{email_form}}
+                            <input type="submit"  class="theme-btn">
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-branch-wrapper section-padding pt-0">
+        <div class="container">
+            <div class="col-lg-8 offset-lg-2 text-center col-12">
+                <div class="section-title-2">
+                    <span>Nuestras Regiones</span>
+                    <h1>Contacto </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-branch-card">
+                        <div class="country-flag bg-cover" style="background-image: url('assets/img/flag-1.jpg')"></div>
+                        <div class="content">
+                            <h4>Mitú, Vaupés</h4>
+                       
+                            <p><a href="#">solicitudes@juanthosa.com</a></p>
+                            <div class="branch-links">
+                                <a href="https://www.google.com/maps?ll=1.252174,-70.233617&z=12&t=m&hl=es&gl=CO&mapclient=embed&q=Mit%C3%BA+Vaup%C3%A9s"><i class="fal fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-branch-card">
+                        <div class="country-flag bg-cover" style="background-image: url('assets/img/flag-2.jpg')"></div>
+                        <div class="content">
+                            <h4>Guaviare</h4>
+                            
+                            <p><a href="#">solicitudes@juanthosa.com</a></p>
+                            <div class="branch-links">
+                                <a href="https://www.google.com/maps/place/San+Jos%C3%A9+Del+Guaviare,+Guaviare/@2.5693923,-72.6563816,14z/data=!3m1!4b1!4m5!3m4!1s0x8e177699aa9e024d:0xa81b5573e08a8504!8m2!3d2.5677606!4d-72.6396535?hl=es"><i class="fal fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-branch-card">
+                        <div class="country-flag bg-cover" style="background-image: url('assets/img/flag-3.jpg')"></div>
+                        <div class="content">
+                            <h4>Vichada</h4>
+                           
+                            <p><a href="#">solicitudes@juanthosa.com</a></p>
+                            <div class="branch-links">
+                                <a href="https://www.google.com/maps/place/Puerto+Carre%C3%B1o,+Vichada/@6.1847873,-67.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV"><i class="fal fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="office-google-map-wrapper wow fadeInUp">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.9243713558!2d-70.25112710989562!3d1.252173891547375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e04a57be2d7cb01%3A0x26d275a567c28934!2zTWl0w7osIFZhdXDDqXM!5e0!3m2!1ses!2sco!4v1651271993334!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer-1 footer-wrap">
+        <div class="footer-widgets-wrapper theme-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="about-transland pe-md-5 pe-xl-0">
+                            <a href="index.html">
+                                <img src="{% static 'assets/img/footer-logo.png'  %}">
+                            </a>
+                            <p>JUANTHOSA RED S.A.S. es Empresa comprometida con la prestación eficiente de los servicios de transporte especial de pasajeros y carga en la modalidad terrestre, fluvial y aérea para todos los usuarios de las zonas rurales de difícil acceso, comunidades dispersas, resguardos, comunidades indígenas y afrodescendientes de la región de la Orinoquia Colombiana.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-2">
+                        <div class="single-footer-wid ps-xl-4">
+                            <div class="wid-title">
+                                <h6>Mas info</h6>
+                            </div>
+                            <ul>
+                                <li><a href="about.html">A que nos dedicamos</a></li>
+                                <li><a href="contact.html">Pide un transporte</a></li>
+                                <li><a href="services.html">Localizar envio</a></li>
+                           
+                            </ul>
+                        </div>
+                    </div>
+
+                   <!--  <div class="col-sm-6 col-xl-2">
+                        <div class="single-footer-wid ps-xl-2">
+                            <div class="wid-title">
+                                <h6>Servicios</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#">What We Do</a></li>
+                                <li><a href="#">Request a Freight</a></li>
+                                <li><a href="#">Track & Trace</a></li>
+                                <li><a href="#">Rail Freight</a></li>
+                                <li><a href="#">Maritime Transport</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-2">
+                        <div class="single-footer-wid">
+                            <div class="wid-title">
+                                <h6>Industry Sectors</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#">Electronics Industry</a></li>
+                                <li><a href="#">Manufacturing</a></li>
+                                <li><a href="#">Semicon & Solar</a></li>
+                                <li><a href="#">Oil & Gas Cargo</a></li>
+                                <li><a href="#">Energy & Chemicals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+ -->
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="single-footer-wid site-info-widget">
+                            <div class="wid-title">
+                                <h6>Contacto</h6>
+                            </div>
+                            <div class="get-in-touch">
+                                <div class="single-contact-info">
+                                    <div class="icon id1">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <span>Mitú, Vaupés</span>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon id2">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <span>573123911413</span>
+                                    </div>
+                                </div>
+                                <div class="single-contact-info">
+                                    <div class="icon id3">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-info">
+                                        <span>solicitudes@juanthosa.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newsletter_widget">
+                                <div class="newsletter_box">
+                                   {% comment %}  <form action="#">
+                                        <input type="email" placeholder="Ingresa tu correo" required>
+                                        <button class="submit-btn" type="submit"><i class="fas fa-envelope-open"></i></button>
+                                    </form> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container align-items-center">
+                <div class="bottom-content-wrapper">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="copy-rights">
+                                <p>&copy;2022 <strong>Juanthosa</strong>, Todos los derechos reservados</p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h5>Atencion:</h5>
+                            <span>Lunes-Viernes 7am-12pm y 2pm- 5pm, Sabados 7am-12pm en Teléfono y Oficina</span>
+                        </div>
+                      {% comment %}   <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>   
+
+
+    <!--  ALl JS Plugins
+    ====================================== -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.easing.js' %}"></script>
+    <script src="{% static '/assets/js/popper.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/assets/js/imageload.min.js' %}"></script>
+    <script src="{% static '/assets/js/scrollUp.min.js' %}"></script>
+    <script src="{% static '/assets/js/slick.min.js' %}"></script>
+    <script src="{% static '/assets/js/slick-animation.min.js' %}"></script>
+    <script src="{% static '/assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static '/assets/js/wow.min.js' %}"></script>
+    <script src="{% static '/assets/js/metismenu.js' %}"></script>
+    <script src="{% static '/assets/js/nice-select2.js' %}"></script>
+    <script src="{% static '/assets/js/active.js' %}"></script>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ SECRET_KEY = 'rqr_cjv4igscyu8&&(0%e(=sy=f2)p=f_wn&@0xsp7m$@!kp=d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['5d53-181-63-4-66.ngrok.io', 'localhost']
+ALLOWED_HOSTS = ['5d53-181-63-4-66.ngrok.io', 'localhost', '*']
 
 
 # Application definition
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'juanthosa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
+        'NAME': 'juanthosa',
+        'USER': 'juanthosa',
+        'PASSWORD': 'juanthosadb2022',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -130,3 +130,11 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.juanthosa.com'
+EMAIL_HOST_USER = 'servicioalcliente@juanthosa.com'
+EMAIL_HOST_PASSWORD = 'I4v!RkbX1KXP'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

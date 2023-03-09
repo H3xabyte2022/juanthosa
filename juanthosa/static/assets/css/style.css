@@ -1251,7 +1251,7 @@ p {
 }
 
 .checked-list.color li::before {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .checked-list.right li {
@@ -2784,7 +2784,7 @@ nav .breadcrumb li {
   width: 120px;
   height: 120px;
   background-color: #fff;
-  color: #fd7062;
+  color: #6cfd62;
   line-height: 122px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -2877,7 +2877,7 @@ nav .breadcrumb li {
           animation: spinner 1s infinite linear;
   border-radius: 50%;
   border: 3px solid rgba(0, 0, 0, 0.2);
-  border-top-color: #fd7062;
+  border-top-color: #6cfd62;
   height: 9em;
   margin: 0 auto 3.5em auto;
   width: 9em;
@@ -3522,7 +3522,7 @@ header.header-3 .main-menu ul > li > a i {
 }
 
 header.header-3 .main-menu ul > li:hover > a {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 header.header-3 .main-menu ul > li:hover > ul {
@@ -3561,7 +3561,7 @@ header.header-3 .main-menu ul > li > ul li a {
 }
 
 header.header-3 .main-menu ul > li > ul li a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 header.header-3 .main-menu ul > li > ul ul {
@@ -3600,7 +3600,7 @@ header .header-right-element .search-btn {
 }
 
 header .header-right-element .search-btn:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 header .header-right-element .search-box {
@@ -3642,7 +3642,7 @@ header .header-right-element .search-box form button {
   top: 0;
   display: inline-block;
   height: 60px;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   color: #fff;
   text-align: center;
   padding: 0px 25px;
@@ -3827,7 +3827,7 @@ header .header-right-element .search-box form button:hover {
   overflow: hidden;
   margin-right: 15px;
   font-size: 36px;
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-info-element .text {
@@ -4288,7 +4288,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .hero-1 .single-slide .hero-contents h1 span {
-  color: #fd7062 !important;
+  color: #6cfd62 !important;
   text-decoration: underline;
 }
 
@@ -4309,7 +4309,7 @@ header .header-right-element .search-box form button:hover {
   bottom: 0;
   width: 400px;
   height: 130px;
-  background-color: #fd7062;
+  background-color: #6cfd62;
 }
 
 @media (max-width: 767px) {
@@ -4533,8 +4533,8 @@ header .header-right-element .search-box form button:hover {
 
 .hero-2 .single-slide .hero-contents a {
   margin-top: 30px;
-  background-color: #fd7062;
-  border-color: #fd7062;
+  background-color: #6cfd62;
+  border-color: #6cfd62;
 }
 
 @media (max-width: 767px) {
@@ -4915,10 +4915,10 @@ header .header-right-element .search-box form button:hover {
 .section-title-2 span {
   text-transform: capitalize;
   display: block;
-  color: #fd7062;
+  color: #6cfd62;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fd7062;
+  -webkit-text-stroke-color: #6cfd62;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -5010,7 +5010,7 @@ header .header-right-element .search-box form button:hover {
 .block-contents .section-title > span {
   font-weight: 700;
   text-transform: capitalize;
-  color: #fd7062;
+  color: #6cfd62;
   font-size: 14px;
   position: relative;
   padding-left: 80px;
@@ -5023,7 +5023,7 @@ header .header-right-element .search-box form button:hover {
   left: 0;
   width: 60px;
   height: 2px;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   content: "";
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5299,7 +5299,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-features-box:hover .icon {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-features-box .icon {
@@ -5450,7 +5450,7 @@ header .header-right-element .search-box form button:hover {
   width: 60px;
   text-align: center;
   color: #FFF;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   line-height: 60px;
   font-size: 18px;
   -webkit-transition: all .3s ease-in-out;
@@ -5523,7 +5523,7 @@ header .header-right-element .search-box form button:hover {
   opacity: 0;
   visibility: hidden;
   content: "";
-  background-color: #fd7062;
+  background-color: #6cfd62;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -5836,7 +5836,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .our-services-box .single-service-icon .service-link:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .service-details-wrapper h1, .service-details-wrapper h2, .service-details-wrapper h3, .service-details-wrapper h4, .service-details-wrapper h6, .service-details-wrapper h5 {
@@ -5863,7 +5863,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .service-details-contents .contents .single-service-features:hover {
-  background-color: #fd7062;
+  background-color: #6cfd62;
 }
 
 .service-details-contents .contents .single-service-features:hover .icon {
@@ -5875,7 +5875,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .service-details-contents .contents .single-service-features .icon {
-  color: #fd7062;
+  color: #6cfd62;
   font-size: 40px;
   margin-bottom: 15px;
 }
@@ -5922,7 +5922,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .service-details-contents .contents blockquote a:hover, .service-details-contents .contents .wp-block-quote a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 @media (max-width: 767px) {
@@ -6006,7 +6006,7 @@ header .header-right-element .search-box form button:hover {
   left: 0;
   content: "\f0da";
   font-family: "Font Awesome 5 Pro";
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .service-sidebar-wrapper .single-sidebar-widgets .services-category-link a:last-of-type {
@@ -6014,7 +6014,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .service-sidebar-wrapper .single-sidebar-widgets .services-category-link a:hover {
-  color: #fd7062;
+  color: #6cfd62;
   padding-left: 35px;
 }
 
@@ -6033,8 +6033,8 @@ header .header-right-element .search-box form button:hover {
 
 .service-sidebar-wrapper .doc-sidebar a:last-child {
   margin-bottom: 0;
-  background-color: #fd7062;
-  border-color: #fd7062;
+  background-color: #6cfd62;
+  border-color: #6cfd62;
 }
 
 .service-sidebar-wrapper .help-line-card {
@@ -6143,7 +6143,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-testimonial-card .feedback .star {
-  color: #fd7062;
+  color: #6cfd62;
   line-height: 1;
 }
 
@@ -6283,8 +6283,8 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-price-bar .theme-btn:hover {
-  background: #fd7062;
-  border-color: #fd7062;
+  background: #6cfd62;
+  border-color: #6cfd62;
 }
 
 .single-price-bar .theme-btn i {
@@ -6305,8 +6305,8 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-pricing-plan.plan-1 .theme-btn, .single-pricing-plan.plan-4 .theme-btn {
-  background-color: #fd7062;
-  border-color: #fd7062;
+  background-color: #6cfd62;
+  border-color: #6cfd62;
 }
 
 .single-pricing-plan.plan-1 .theme-btn:hover, .single-pricing-plan.plan-4 .theme-btn:hover {
@@ -6334,8 +6334,8 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-pricing-plan.active .theme-btn:hover {
-  background-color: #fd7062;
-  border-color: #fd7062;
+  background-color: #6cfd62;
+  border-color: #6cfd62;
 }
 
 .single-pricing-plan.active .plan-title h2 {
@@ -6347,7 +6347,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-pricing-plan.active .plan-value span {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-pricing-plan.active li {
@@ -6513,7 +6513,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .team-member-card .profile-info-card {
-  background: #fd7062;
+  background: #6cfd62;
   padding: 30px;
   position: absolute;
   right: 20px;
@@ -6609,7 +6609,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-team-member .social-icons:hover .plus-icon {
-  background-color: #fd7062;
+  background-color: #6cfd62;
 }
 
 .single-team-member .social-icons:hover .plus-icon i {
@@ -6753,7 +6753,7 @@ header .header-right-element .search-box form button:hover {
 .team-member-details-wrapper .icon-box .icon {
   margin-bottom: 20px;
   font-size: 80px;
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 @media (max-width: 576px) {
@@ -7120,7 +7120,7 @@ header .header-right-element .search-box form button:hover {
 .single-funfact-digit h2 {
   font-size: 80px;
   line-height: 1;
-  color: #fd7062;
+  color: #6cfd62;
   margin-bottom: 0;
   position: relative;
   display: inline-block;
@@ -7599,7 +7599,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .investors-inquire-card {
-  background: #fd7062;
+  background: #6cfd62;
   padding: 40px;
 }
 
@@ -7656,7 +7656,7 @@ header .header-right-element .search-box form button:hover {
 
 .investors-inquire-card .social-profile a:hover {
   background-color: #fff;
-  color: #fd7062 !important;
+  color: #6cfd62 !important;
 }
 
 .faq-wrapper {
@@ -7735,12 +7735,12 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-news-card .contents .post-cat-date .post-cat a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-news-card .contents .post-cat-date .post-date {
   font-size: 14px;
-  color: #fd7062;
+  color: #6cfd62;
   font-weight: 700;
   position: relative;
   padding-left: 15px;
@@ -7756,7 +7756,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-news-card .contents h5:hover a {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-news-card .contents .post-author {
@@ -7833,7 +7833,7 @@ header .header-right-element .search-box form button:hover {
   padding: 10px 20px;
   text-transform: capitalize;
   color: #fff;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
@@ -7907,7 +7907,7 @@ header .header-right-element .search-box form button:hover {
   padding: 10px 20px;
   text-transform: capitalize;
   color: #fff;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
@@ -7945,19 +7945,19 @@ header .header-right-element .search-box form button:hover {
 }
 
 .single-news-box .content h3 a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-news-box .content .read-btn {
   margin-top: 20px;
   display: block;
   font-weight: 600;
-  color: #fd7062;
+  color: #6cfd62;
   text-transform: capitalize;
 }
 
 .single-news-box .content .read-btn:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .border-wrap {
@@ -8376,7 +8376,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .main-sidebar .single-sidebar-widget ul > li a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .main-sidebar .single-sidebar-widget ul ul {
@@ -8548,7 +8548,7 @@ header .header-right-element .search-box form button:hover {
 }
 
 .widget_categories ul li a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .widget_categories ul li a span {
@@ -8901,7 +8901,7 @@ p.sticky-label {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  background-color: #fd7062;
+  background-color: #6cfd62;
   float: left;
   text-align: center;
   overflow: hidden;
@@ -9102,7 +9102,7 @@ p.sticky-label {
 
 .single-branch-card .content .branch-links a:hover {
   padding-left: 5px;
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .single-branch-card .content .branch-links a i {
@@ -9216,7 +9216,7 @@ p.sticky-label {
 }
 
 .single-contact-card:hover {
-  background-color: #fd7062;
+  background-color: #6cfd62;
 }
 
 .single-contact-card:hover .icon {
@@ -9343,7 +9343,7 @@ footer .single-footer-wid ul li a {
 }
 
 footer .single-footer-wid ul li a:hover {
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 footer.footer-2 {
@@ -9373,7 +9373,7 @@ footer .footer-bottom {
 }
 
 footer .footer-bottom .bottom-content-wrapper {
-  background-color: #fd7062;
+  background-color: #6cfd62;
   padding: 35px 50px;
 }
 
@@ -9432,7 +9432,7 @@ footer .footer-bottom .social-links a:last-of-type {
   float: left;
   overflow: hidden;
   margin-right: 15px;
-  color: #fd7062;
+  color: #6cfd62;
 }
 
 .get-in-touch .single-contact-info .icon.id2 {
@@ -9529,7 +9529,7 @@ footer .footer-bottom .social-links a:last-of-type {
 }
 
 .newsletter_widget .newsletter_box button:hover {
-  background-color: #fd7062;
+  background-color: #6cfd62;
   color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
