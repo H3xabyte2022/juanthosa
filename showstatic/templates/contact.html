@@ -353,7 +353,7 @@
                                 <option value="" selected="selected">Seleccione requerimiento</option>
                                 <option value="solicitud">Solicitud</option>
                                 <option value="pqrs">PQRs</option>
-                      
+                                <option value="solicitud">Cotizacion</option>
                                 </select>
                             </div>
                                
@@ -371,6 +371,7 @@
                                             $('label[for=id_cantidad_pasajeros], input#id_cantidad_pasajeros').hide();
                                             $('#id_lugar_recogida').hide();
                                             $('#id_lugar_destino').hide();
+                                            $('label[for=id_peso], input#id_peso').hide();
                                             $('label[for=id_lugar_recogida], input#id_lugar_recogida').hide();
                                             $('label[for=id_lugar_destino], input#id_lugar_destino').hide();
                                             $("#id_fecha_servicio").prop('required',false);
@@ -383,6 +384,7 @@
                                             $('label[for=id_cantidad_pasajeros], input#id_cantidad_pasajeros').show();
                                             $('#id_lugar_recogida').show();
                                             $('#id_lugar_destino').show();
+                                            $('label[for=id_peso], input#id_peso').show();
                                             $('label[for=id_lugar_recogida], input#id_lugar_recogida').show();
                                             $('label[for=id_lugar_destino], input#id_lugar_destino').show();
                                             $("#id_fecha_servicio").prop('required',true);

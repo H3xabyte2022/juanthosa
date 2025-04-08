@@ -135,6 +135,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.juanthosa.com'
 EMAIL_HOST_USER = 'servicioalcliente@juanthosa.com'
-EMAIL_HOST_PASSWORD = 'I4v!RkbX1KXP'
+EMAIL_HOST_PASSWORD = 'hhSlT{KO5p,E'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

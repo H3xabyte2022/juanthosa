@@ -14,7 +14,8 @@ from .forms import EmailForm
 from django.views import View
 from django.template.loader import render_to_string, get_template
 from django.utils.translation import activate
-
+import requests
+import json
 #def contact(request, filename=''):
  
    #return render(request,'contact.html') 
@@ -54,11 +55,13 @@ class contact(View):
                 
              empresa = form.cleaned_data['empresa']
              tipo_transporte = form.cleaned_data['tipo_transporte']
-             subject = form.cleaned_data['subject']
+             
              mensaje = form.cleaned_data['message']
              sender = 'servicioalcliente@juanthosa.com'
              email = form.cleaned_data['email']
              buzon = form.cleaned_data['tipo_peticion']
+             peso = form.cleaned_data['peso']
+             
              try:
                 attach = request.FILES['attach']
              except:
@@ -66,12 +69,13 @@ class contact(View):
              
              #message = form.cleaned_data['message']
              #html_message = html
-             if buzon == 'pqr@juanthosa.com':
+             if buzon == 'pqrsf@juanthosa.com':
                req = 'PQR'
              elif buzon == 'solicitudes@juanthosa.com':
                req = 'Solicitud'
              else:
-               req = 'error'    
+               req = 'Cotizacion'  
+             subject = form.cleaned_data['subject'] + '-' + req     
              ctx = {
              'nombre' : nombre,
              'telefono': telefono,
@@ -85,13 +89,15 @@ class contact(View):
              'tipo_transporte': tipo_transporte,
              'subject':subject,
              
-             
+             'peso': peso,
              'email': email,
              'buzon': req,
              'mensaje': mensaje,
              'fecha_servicio': fecha_servicio,
              'cantidad_pasajeros': cantidad_pasajeros
     }
+            
+             buzon = 'solicitudes@juanthosa.com'
              message = get_template('email.html').render(ctx)
              if not attach:
                 mail = EmailMessage(subject,  message, sender, [buzon])
@@ -111,6 +117,7 @@ class contact(View):
                     return render(request, self.template_name, {'email_form': form, 'error_message': 'El archivo es demasiado grande o esta corrupto'})
 
          return render(request, self.template_name, {'email_form': form, 'error_message': 'Error. Intenta de nuevo mas tarde'})
+
 
 
 class EmailAttachementView(View):
@@ -147,11 +154,12 @@ class EmailAttachementView(View):
                 
              empresa = form.cleaned_data['empresa']
              tipo_transporte = form.cleaned_data['tipo_transporte']
-             subject = form.cleaned_data['subject']
+             
              mensaje = form.cleaned_data['message']
              sender = 'servicioalcliente@juanthosa.com'
              email = form.cleaned_data['email']
              buzon = form.cleaned_data['tipo_peticion']
+             peso = form.cleaned_data['peso']
              try:
                 attach = request.FILES['attach']
              except:
@@ -159,12 +167,13 @@ class EmailAttachementView(View):
              
              #message = form.cleaned_data['message']
              #html_message = html
-             if buzon == 'pqr@juanthosa.com':
+             if buzon == 'pqrsf@juanthosa.com':
                req = 'PQR'
              elif buzon == 'solicitudes@juanthosa.com':
                req = 'Solicitud'
              else:
-               req = 'error'    
+               req = 'Cotizacion'  
+             subject = form.cleaned_data['subject'] + '-' + req     
              ctx = {
              'nombre' : nombre,
              'telefono': telefono,
@@ -178,14 +187,55 @@ class EmailAttachementView(View):
              'tipo_transporte': tipo_transporte,
              'subject':subject,
              
-             
+             'peso': peso,
              'email': email,
              'buzon': req,
              'mensaje': mensaje,
              'fecha_servicio': fecha_servicio,
              'cantidad_pasajeros': cantidad_pasajeros
     }
+             buzon = 'solicitudes@juanthosa.com'
              message = get_template('email.html').render(ctx)
+             TIPOTRANS ={
+               "Transporte_fluvial": "Fluvial",
+               "Transporte_terrestre": "Terrestre",
+               "Transporte_aereo": "Aereo",
+               "Transporte_combinado": "Combinado",
+               "Ninguno": "Ninguno"
+            }
+             data = {
+               "nombre_completo": ctx['nombre'],
+               "telefono": ctx['telefono'],
+               "destino": ctx['lugar_destino'],
+               "lugar_salida": ctx['lugar_recogida'],
+               "empresa": ctx['empresa'],
+               "transportes": TIPOTRANS[ctx['tipo_transporte']],
+               "fecha_servicio": ctx['fecha_servicio'].isoformat() if ctx['fecha_servicio'] else None,
+               "pasajeros": ctx['cantidad_pasajeros'],
+               "peso": ctx['peso'],
+               "correo": ctx['email'],
+               "asunto": ctx['subject'],
+               "mensaje": ctx['mensaje'],
+               "estado": "Pendiente"
+            }
+             
+             if req == 'Solicitud':
+               try:
+                  # envío del POST
+                  headers = {'Content-Type': 'application/json'}  # Nueva línea
+                  response = requests.post('http://18.217.146.158/solicitudes/api/solicitudes/', data=json.dumps(data), headers=headers)
+                  
+                  # puedes manejar la respuesta aquí
+                  if response.status_code == 200:
+                        print('Solicitud enviada con éxito')
+                        print('Respuesta:', response.json())
+                  else:
+                        print('Hubo un error al enviar la solicitud')
+                        print('Código de estado:', response.status_code)
+                        print('Respuesta:', response.json())
+               except Exception as e:
+                  print('Excepción:', str(e))
+                  
              if not attach:
                 mail = EmailMessage(subject,  message, sender, [buzon])
                 mail.content_subtype ="html"

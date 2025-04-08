@@ -359,10 +359,10 @@
                                     <i class="flaticon-drone-2"></i>
                                 </div>
                                 <div class="title">
-                                    <h6><a href="/login">Login</a></h6>
+                                    <h6><a href="http://18.217.146.158/">Login</a></h6>
                                 </div>
                             </div>
-                            <a href="/login" class="service-link"><i class="fal fa-long-arrow-right"></i></a>
+                            <a href="http://18.217.146.158/" class="service-link"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
              
@@ -668,7 +668,7 @@
                                 <option value="" selected="selected">Seleccione requerimiento</option>
                                 <option value="solicitud">Solicitud</option>
                                 <option value="pqrs">PQRs</option>
-                      
+                                <option value="solicitud">Cotizacion</option>
                                 </select>
                             </div>
                                
@@ -688,6 +688,7 @@
                                             $('#id_lugar_destino').hide();
                                             $('label[for=id_lugar_recogida], input#id_lugar_recogida').hide();
                                             $('label[for=id_lugar_destino], input#id_lugar_destino').hide();
+                                            $('label[for=id_peso], input#id_peso').hide();
                                             $("#id_fecha_servicio").prop('required',false);
                                             $("#id_cantidad_pasajeros").prop('required',false);
                                         }else if (val === 'solicitud') {
@@ -695,6 +696,7 @@
                                             $('#id_fecha_servicio').show();
                                             $('#id_cantidad_pasajeros').show();
                                             $('label[for=id_fecha_servicio], input#id_fecha_servicio').show();
+                                            $('label[for=id_peso], input#id_peso').show();
                                             $('label[for=id_cantidad_pasajeros], input#id_cantidad_pasajeros').show();
                                             $('#id_lugar_recogida').show();
                                             $('#id_lugar_destino').show();
