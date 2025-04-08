@@ -223,7 +223,7 @@ class EmailAttachementView(View):
                try:
                   # envío del POST
                   headers = {'Content-Type': 'application/json'}  # Nueva línea
-                  response = requests.post('http://18.217.146.158/solicitudes/api/solicitudes/', data=json.dumps(data), headers=headers)
+                  response = requests.post('https://www.app.juanthosa.com/solicitudes/api/solicitudes/', data=json.dumps(data), headers=headers)
                   
                   # puedes manejar la respuesta aquí
                   if response.status_code == 200:
